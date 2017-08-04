@@ -1,8 +1,8 @@
 # HideAnythingOnWebPage
 This is a chrome extension which hides selected HTML elements on web page
 
-## install from Chrome Web Store
-[Chromwe web store](https://chrome.google.com/webstore/detail/hide-anything-on-web-page/elhdobicpainkehfdppllipnlompaenm?hl=en-US&gl=US)
+## Install from Chrome Web Store
+[Chrom web store](https://chrome.google.com/webstore/detail/hide-anything-on-web-page/elhdobicpainkehfdppllipnlompaenm?hl=en-US&gl=US)
 
 ## Manual Installation:
 1. Open Chrome, click option menu, then choose Mode Tools -> Extensions
