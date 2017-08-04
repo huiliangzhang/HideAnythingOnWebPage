@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "Hide Anything on Web Page",
+  "description": "This extension hides chosen HTML contents by clicks",
+  "version": "1.0",
+  "background": {
+    "scripts": [
+      "bgSettings.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "on.png",
+    "default_popup": "popup.html",
+	"default_title": "Tool for Hiding Chosen Content"
+  },
+  "permissions": [
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "css": ["mystyles.css"],
+      "js": ["myscript.js"]
+    }
+  ]
+
+}

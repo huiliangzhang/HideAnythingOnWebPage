@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Hide Anything inside Web Page</title>
+    <script src="popup.js"></script>
+  </head>
+  <style type="text/css">
+	body {
+    	width: 32em;
+    	display: block;
+    	position: relative;
+	}
+	div {
+		padding:5px 5px;
+	}
+	.disabled {
+		color:gray;
+	}
+
+  </style>
+  <body>
+	<h3>
+		Hide anything you choose inside web page
+	</h3>	
+    <div id="helpSection">
+    	Hold <select id="activationKey">
+		  <option value="alt">ALT</option>
+		  <option value="control">CONTROL</option>
+		  <option value="shift">SHIFT</option>
+		</select>
+		key to operate. <br>
+		Click to hide. Double Click to show all disappearing.
+	</div>
+	<div>
+		<form name="runningForm">
+		  <input type="radio" name="running" value="on"> ON<br>
+		  <input type="radio" name="running" value="off"> OFF<br>
+		</form>
+	</div>
+  </body>
+</html>
+
