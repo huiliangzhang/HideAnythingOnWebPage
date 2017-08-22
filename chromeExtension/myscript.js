@@ -82,6 +82,7 @@ styleClasses.remove = function(element, name){
 	if(element && element.className && element.className.indexOf(styleClasses[name])!=-1)
 	{
 		element.className = element.className.replace(styleClasses[name], '');
+		element.childNodes.forEach(function(x){styleClasses.remove(x, name)});
 	}	
 }
 styleClasses.add = function(element, name){
@@ -94,6 +95,9 @@ styleClasses.add = function(element, name){
 		element.className='';
 	}
 	element.className += styleClasses[name];
+	
+	element.childNodes.forEach(function(x){styleClasses.add(x, name)});
+	
 }
 
 chrome.runtime.onMessage.addListener(
