@@ -33,6 +33,10 @@ var func_mousemove = function(e){
 		last_hover_element = target;
 	}	
 }
+
+var originalTitle;
+
+
 var func_document_click = function(e){
 	if(!isActivated(e))
 	{
@@ -47,9 +51,24 @@ var func_document_click = function(e){
 		disappearing_elements.forEach(function(x){ styleClasses.remove(x, 'disappearing'); });
 		disappearing_elements=[];
 		styleClasses.remove(last_hover_element, 'hoving');
+		
+		if(originalTitle)
+		{
+			document.title = originalTitle;
+		}
+		
 		return;
 	}
 	last_click=now;
+	
+	if(settings.titleName)
+	{
+		if(!originalTitle)
+		{
+			originalTitle = document.title;
+		}
+		document.title = settings.titleName;
+	}
 	
 	var target = e.target;
 	styleClasses.add(target, 'disappearing');	

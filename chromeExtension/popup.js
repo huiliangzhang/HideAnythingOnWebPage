@@ -9,6 +9,7 @@ var clickRunning = function() {
 		return;
 	}
 	settings.running = document.runningForm.running.value;	
+	settings.titleName = document.titleNameForm.titleName.value;	
 	updateUI();
 	
 	syncContentScript(settings);
@@ -40,6 +41,16 @@ document.addEventListener('DOMContentLoaded', function() {
 		{
 			document.runningForm.running[i].onclick = clickRunning;
 		}
+		
+		if(settings.titleName)
+		{
+			document.titleNameForm.titleName.value = settings.titleName;	
+		}
+		document.titleNameForm.titleName.onchange = function(){
+			settings.titleName = document.titleNameForm.titleName.value;
+			syncContentScript(settings);
+		}
+		
 		updateUI();
 		
 	});	

@@ -15,6 +15,7 @@ if(localStorage.activationKey === 'shift' || localStorage.activationKey === 'con
 {
 	settings.activationKey = localStorage.activationKey;
 }
+settings.titleName = localStorage.titleName;
 syncContentScript();
 
 var changeIcon = function() {
@@ -40,6 +41,7 @@ chrome.runtime.onMessage.addListener(
 		settings = request;
 		localStorage.running = settings.running;
 		localStorage.activationKey = settings.activationKey;
+		localStorage.titleName = settings.titleName;
 		changeIcon();		
 		syncContentScript();
 	}	
